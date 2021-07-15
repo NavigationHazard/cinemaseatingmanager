@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     // formatting the decimal point for percentageBooked
-    private static DecimalFormat df2 = new DecimalFormat("#.00");
+    private static final DecimalFormat df2 = new DecimalFormat("#.00");
 
     public static void main(String[] args) {
         // Scanner initialization
@@ -28,7 +28,9 @@ public class Main {
         // read the keep the menu active until the user choose exit
         while (seatingMap.menuInput != 0) {
             switch (seatingMap.menuInput) {
+                // Exit if user chooses to
                 case 0:
+                    System.out.println("Exit");
                     break;
                 // print the current layout
                 case 1:
